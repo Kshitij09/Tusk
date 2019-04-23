@@ -11,4 +11,15 @@
         <item name="android:fontFamily">@font/roboto</item>
     </style>
 
+    <style name="TextAppearance.Tusk.Ratings">
+        <item name="android:drawableRight">@drawable/ic_star_small</item>
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:background">@color/cardStar</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:clickable">false</item>
+    </style>
+
 </resources>

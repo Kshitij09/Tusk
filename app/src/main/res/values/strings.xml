@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Tusk</string>
+    <string name="rs_string">\u20B9 %1$s</string>
+    <string name="product_name">Product Name</string>
+    <string name="dummy_rating">4.5</string>
+    <string name="price">Price</string>
 </resources>
