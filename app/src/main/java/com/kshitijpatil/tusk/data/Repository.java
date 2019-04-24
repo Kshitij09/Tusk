@@ -9,6 +9,7 @@ import java.util.List;
 public class Repository {
     private static Repository repository = null;
     List<Product> products;
+    List<Product> cartProducts;
 
     public Repository() {
         products = Arrays.asList(new Product("Amazon Echo - Smart speaker with Alexa | Powered by Dolby – Black", 7999, "Amazon Echo is a hands-free smart speaker that you control using your voice. It connects to Alexa – a cloud based voice service to play music, make calls, check weather and news, set alarms, control smart home devices, and much more.", 4.7f, R.drawable.pr_echo),
@@ -25,5 +26,13 @@ public class Repository {
 
     public List<Product> getProducts() {
         return products;
+    }
+
+    public Product getProductById(int index) {
+        return products.get(index);
+    }
+
+    public void saveToCart(Product product) {
+        cartProducts.add(product);
     }
 }
