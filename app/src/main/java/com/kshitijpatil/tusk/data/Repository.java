@@ -1,6 +1,6 @@
-package com.kshitijpatil.tusk.ui.data;
+package com.kshitijpatil.tusk.data;
 
-import com.kshitijpatil.tusk.ui.data.model.Product;
+import com.kshitijpatil.tusk.data.model.Product;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.kshitijpatil.tusk.ui.data.model;
+package com.kshitijpatil.tusk.data.model;
 
 public class Product {
     String name;

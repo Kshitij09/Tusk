@@ -1,6 +1,6 @@
 package com.kshitijpatil.tusk;
 
-import com.kshitijpatil.tusk.ui.data.Repository;
+import com.kshitijpatil.tusk.data.Repository;
 
 /**
  * Factory implementation for dependency injection
