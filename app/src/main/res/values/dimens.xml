@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="card_item_size">128dp</dimen>
+    <dimen name="thumbnail_small">64dp</dimen>
     <dimen name="product_preview_height">256dp</dimen>
 </resources>

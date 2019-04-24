@@ -9,6 +9,10 @@
         <variable
             name="product"
             type="com.kshitijpatil.tusk.data.model.Product" />
+
+        <variable
+            name="presenter"
+            type="com.kshitijpatil.tusk.ui.productdetail.ProductDetailsPresenter" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -106,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:padding="18dp"
-            android:text="@string/add_cart"
+            android:onClick="@{() -> presenter.addToCart(product)}"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -114,6 +118,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/btn_buy"
             app:rippleColor="@color/colorPrimary"
+            android:text="@{presenter.isExisting ? @string/goto_cart : @string/add_cart, default=@string/add_cart}"
             app:strokeColor="@color/colorPrimaryDark" />
 
 
