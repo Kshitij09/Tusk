@@ -3,8 +3,18 @@
     <string name="rs_string">\u20B9 %1$d</string>
     <string name="product_name">Product Name</string>
     <string name="dummy_rating">4.5</string>
+    <string name="action_Cart">Cart</string>
     <string name="price">Price</string>
     <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
     <string name="buy_now">Buy Now</string>
-    <string name="add_cart">Add to Cart</string>
+    <string name="add_cart">Add to cart</string>
+    <string name="goto_cart">Go to cart</string>
+    <string name="remove">Remove</string>
+    <string-array name="qty_options">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
 </resources>
