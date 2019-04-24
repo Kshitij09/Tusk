@@ -1,9 +1,9 @@
-package com.kshitijpatil.tusk.ui.listproducts;
+package com.kshitijpatil.tusk.ui.products;
 
 import com.kshitijpatil.tusk.Injector;
+import com.kshitijpatil.tusk.data.Repository;
+import com.kshitijpatil.tusk.data.model.Product;
 import com.kshitijpatil.tusk.ui.base.BasePresenter;
-import com.kshitijpatil.tusk.ui.data.Repository;
-import com.kshitijpatil.tusk.ui.data.model.Product;
 
 import java.util.List;
 
