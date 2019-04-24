@@ -32,7 +32,7 @@
 
         <TextView
             android:id="@+id/btn_rating"
-            style="@style/TextAppearance.Tusk.Ratings"
+            style="@style/Ratings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
