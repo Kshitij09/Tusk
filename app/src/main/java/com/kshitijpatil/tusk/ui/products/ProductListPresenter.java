@@ -7,16 +7,16 @@ import com.kshitijpatil.tusk.ui.base.BasePresenter;
 
 import java.util.List;
 
-public class ProductListPresenter<V extends ListProductContract.View> extends BasePresenter<V> implements ListProductContract.Presenter<V> {
+class ProductListPresenter<V extends ListProductContract.View> extends BasePresenter<V> implements ListProductContract.Presenter<V> {
     private static final String TAG = "ProductListPresenter";
     private Repository repository;
 
 
-    public ProductListPresenter() {
+    ProductListPresenter() {
         repository = Injector.provideRepository();
     }
 
-    public List<Product> getProductList() {
+    List<Product> getProductList() {
         return repository.getProducts();
     }
 
