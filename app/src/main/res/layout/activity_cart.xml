@@ -45,6 +45,7 @@
                     android:layout_centerVertical="true"
                     android:paddingStart="32dp"
                     android:paddingEnd="32dp"
+                    android:onClick="navigateBuy"
                     android:text="@string/continue_label" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>

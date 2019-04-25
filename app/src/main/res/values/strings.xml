@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Tusk</string>
-    <string name="rs_string">\u20B9 %1$d</string>
+    <string name="rs_string">\u20B9 %d</string>
+    <plurals name="item_plural">
+        <item quantity="one"> (%1$d item)</item>
+        <item quantity="other"> (%1$d items)</item>
+    </plurals>
+    <string name="receipt_string">%1$s %2$s</string>
     <string name="product_name">Product Name</string>
     <string name="dummy_rating">4.5</string>
     <string name="action_Cart">Cart</string>
@@ -18,6 +23,8 @@
         <item>4</item>
         <item>5</item>
     </string-array>
-    <string name="total">Total: \u20B9 %1$d</string>
+    <string name="total">Total: \u20B9 %d</string>
     <string name="continue_label">Continue</string>
+    <string name="price_details">Price Details</string>
+    <string name="quantity">Quantity</string>
 </resources>

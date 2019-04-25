@@ -33,20 +33,12 @@ public class ProductDetailsPresenter<V extends ProductDetailsContract.View> exte
     }
 
     @Override
-    public boolean isItemAdded(Product product) {
-        return repository.isExisting(product);
-    }
-
-    @Override
     public int getCartItemCount() {
         return repository.getCartItemCount();
     }
 
+
     @Override
-    public void processBuy(Product product) {
-
-    }
-
     public ObservableBoolean getIsExisting() {
         return isExisting;
     }

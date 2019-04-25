@@ -10,8 +10,8 @@ import com.kshitijpatil.tusk.ui.base.BasePresenter;
 import java.util.List;
 
 public class CartPresenter<V extends CartContract.View> extends BasePresenter<V> implements CartContract.Presenter<V> {
-    Repository repository;
-    ObservableLong total;
+    private Repository repository;
+    private ObservableLong total;
 
     CartPresenter() {
         repository = Injector.provideRepository();

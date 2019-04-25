@@ -9,16 +9,13 @@ import com.kshitijpatil.tusk.ui.base.MvpView;
 public interface ProductDetailsContract {
     interface Presenter<V extends View> extends MvpPresenter<V> {
         void addToCart(Product product);
-        boolean isItemAdded(Product product);
         int getCartItemCount();
-        void processBuy(Product product);
-
         ObservableBoolean getIsExisting();
     }
 
     interface View extends MvpView {
         void onAddedToCart(boolean existing);
 
-        void navigateToBuy();
+        void navigateToBuy(android.view.View view);
     }
 }

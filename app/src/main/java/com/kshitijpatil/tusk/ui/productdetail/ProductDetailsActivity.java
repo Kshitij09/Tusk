@@ -4,18 +4,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.kshitijpatil.tusk.R;
 import com.kshitijpatil.tusk.databinding.ActivityProductDetailsBinding;
+import com.kshitijpatil.tusk.ui.buy.BuyActivity;
 import com.kshitijpatil.tusk.ui.cart.CartActivity;
 import com.kshitijpatil.tusk.ui.products.ProductListActivity;
 import com.kshitijpatil.tusk.util.Converter;
 
 public class ProductDetailsActivity extends AppCompatActivity implements ProductDetailsContract.View {
-    private static final String TAG = "ProductDetailsActivity";
     ActivityProductDetailsBinding binding;
     ProductDetailsPresenter<ProductDetailsContract.View> presenter;
 
@@ -46,9 +47,10 @@ public class ProductDetailsActivity extends AppCompatActivity implements Product
     }
 
     @Override
-    public void navigateToBuy() {
-
+    public void navigateToBuy(View view) {
+        startActivity(new Intent(ProductDetailsActivity.this, BuyActivity.class));
     }
+
 
     @Override
     public void progressBarEnabled(boolean status) {
@@ -71,6 +73,9 @@ public class ProductDetailsActivity extends AppCompatActivity implements Product
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.cart_action) {
+            startActivity(new Intent(ProductDetailsActivity.this, CartActivity.class));
+        }
         return super.onOptionsItemSelected(item);
     }
 

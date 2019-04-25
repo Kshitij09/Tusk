@@ -9,6 +9,7 @@ import com.kshitijpatil.tusk.ui.base.MvpView;
 import java.util.List;
 
 public interface CartContract {
+
     interface Presenter<V extends View> extends MvpPresenter<V> {
         List<Product> getCartItems();
 
@@ -20,6 +21,6 @@ public interface CartContract {
     }
 
     interface View extends MvpView {
-
+        void navigateBuy(android.view.View view);
     }
 }

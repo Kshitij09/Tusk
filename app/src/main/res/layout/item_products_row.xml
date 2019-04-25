@@ -22,15 +22,12 @@
 
         <TextView
             android:id="@+id/txt_name"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:maxEms="15"
-            android:maxLines="10"
-            android:scrollHorizontally="false"
+            android:maxEms="10"
             android:text="@string/product_name"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
             android:textColor="@color/themeGray"
             app:layout_constraintStart_toEndOf="@+id/img_preview"
             app:layout_constraintTop_toTopOf="parent" />
