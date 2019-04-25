@@ -49,4 +49,13 @@ public class Repository {
     public boolean isExisting(Product product) {
         return cartProducts.contains(product);
     }
+
+    public void removeCartItem(Product product) {
+        cartProducts.remove(product);
+    }
+
+    public void setItemQuantity(Product product, int quantity) {
+        int index = cartProducts.indexOf(product);
+        cartProducts.set(index, cartProducts.get(index).setQuantity(quantity));
+    }
 }

@@ -73,4 +73,10 @@ public class ProductDetailsActivity extends AppCompatActivity implements Product
     public boolean onOptionsItemSelected(MenuItem item) {
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        invalidateOptionsMenu();
+    }
 }

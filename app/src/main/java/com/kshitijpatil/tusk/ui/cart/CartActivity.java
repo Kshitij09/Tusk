@@ -3,25 +3,36 @@ package com.kshitijpatil.tusk.ui.cart;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.kshitijpatil.tusk.R;
+import com.kshitijpatil.tusk.databinding.ActivityCartBinding;
 
 public class CartActivity extends AppCompatActivity {
     private static final String TAG = "CartActivity";
-    RecyclerView recyclerCart;
     CartPresenter<CartContract.View> presenter;
     CartAdapter adapter;
+    ActivityCartBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cart);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_cart);
 
         presenter = new CartPresenter<>();
         adapter = new CartAdapter(presenter.getCartItems());
-        recyclerCart = findViewById(R.id.recycler_cart);
-        recyclerCart.setLayoutManager(new LinearLayoutManager(this));
-        recyclerCart.setAdapter(adapter);
+        adapter.setItemRemovedListener(product -> presenter.removeCartItem(product));
+        adapter.setQuantityChangedListener((product, quantity) -> presenter.setItemQuantity(product, quantity));
+        binding.recyclerCart.setLayoutManager(new LinearLayoutManager(this));
+        binding.recyclerCart.setAdapter(adapter);
+        binding.setPresenter(presenter);
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        adapter.setCartList(presenter.getCartItems());
     }
 }

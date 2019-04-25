@@ -10,6 +10,7 @@
     <string name="add_cart">Add to cart</string>
     <string name="goto_cart">Go to cart</string>
     <string name="remove">Remove</string>
+    <string name="quantity_prefix">qty</string>
     <string-array name="qty_options">
         <item>1</item>
         <item>2</item>
@@ -17,4 +18,6 @@
         <item>4</item>
         <item>5</item>
     </string-array>
+    <string name="total">Total: \u20B9 %1$d</string>
+    <string name="continue_label">Continue</string>
 </resources>

@@ -67,6 +67,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:entries="@array/qty_options"
+                android:padding="12dp"
+                android:selectedItemPosition="@{product.quantity - 1}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/img_preview" />
 
@@ -76,12 +78,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="8dp"
                 android:backgroundTint="@android:color/holo_red_dark"
                 android:text="@string/remove"
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
                 app:icon="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/spinner_qty" />
         </androidx.constraintlayout.widget.ConstraintLayout>

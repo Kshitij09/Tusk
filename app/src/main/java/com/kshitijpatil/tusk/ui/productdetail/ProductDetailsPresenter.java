@@ -1,7 +1,7 @@
 package com.kshitijpatil.tusk.ui.productdetail;
 
 
-import androidx.lifecycle.MutableLiveData;
+import androidx.databinding.ObservableBoolean;
 
 import com.kshitijpatil.tusk.Injector;
 import com.kshitijpatil.tusk.data.Repository;
@@ -10,12 +10,12 @@ import com.kshitijpatil.tusk.ui.base.BasePresenter;
 
 public class ProductDetailsPresenter<V extends ProductDetailsContract.View> extends BasePresenter<V> implements ProductDetailsContract.Presenter<V> {
     private Repository repository;
-    private MutableLiveData<Boolean> isExisting;
+    private ObservableBoolean isExisting;
 
     ProductDetailsPresenter(int index) {
         repository = Injector.provideRepository();
-        isExisting = new MutableLiveData<>();
-        isExisting.setValue(repository.isExisting(getProduct(index)));
+        isExisting = new ObservableBoolean(false);
+        isExisting.set(repository.isExisting(getProduct(index)));
     }
 
     Product getProduct(int index) {
@@ -27,7 +27,7 @@ public class ProductDetailsPresenter<V extends ProductDetailsContract.View> exte
         boolean existing = repository.isExisting(product);
         if (!existing) {
             repository.saveToCart(product);
-            isExisting.setValue(true);
+            isExisting.set(true);
         }
         getView().onAddedToCart(existing);
     }
@@ -47,7 +47,7 @@ public class ProductDetailsPresenter<V extends ProductDetailsContract.View> exte
 
     }
 
-    public MutableLiveData<Boolean> getIsExisting() {
+    public ObservableBoolean getIsExisting() {
         return isExisting;
     }
 }

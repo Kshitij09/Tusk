@@ -8,6 +8,7 @@ public class Product {
     String description;
     float rating;
     int preview;
+    int quantity;
 
     public Product() {
         // for firebase
@@ -19,6 +20,7 @@ public class Product {
         this.description = description;
         this.rating = rating;
         this.preview = preview;
+        quantity = 1;
     }
 
     public String getName() {
@@ -59,5 +61,14 @@ public class Product {
 
     public void setPreview(int preview) {
         this.preview = preview;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public Product setQuantity(int quantity) {
+        this.quantity = quantity;
+        return this;
     }
 }
