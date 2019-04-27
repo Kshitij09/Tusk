@@ -22,6 +22,7 @@ public class ProductListActivity extends AppCompatActivity implements ListProduc
         setContentView(R.layout.activity_product_list);
 
         presenter = new ProductListPresenter<>();
+        presenter.onAttach(this);
 
         List<Product> productList = presenter.getProductList();
         adapter = new ProductsAdapter(productList);
@@ -33,5 +34,11 @@ public class ProductListActivity extends AppCompatActivity implements ListProduc
     @Override
     public void progressBarEnabled(boolean status) {
         isLoading = status;
+    }
+
+    @Override
+    protected void onDestroy() {
+        presenter.onDetach();
+        super.onDestroy();
     }
 }
